@@ -47,4 +47,4 @@ line as the moving average of the last 7 days.
 
 This page is updated automatically using Github Actions.
 
-*Last update: 12 mar 2021, 14:46.*
+*Last update: 12 mar 2021, 14:51.*
