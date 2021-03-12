@@ -64,7 +64,7 @@ ma_plot_deaths <- function(data, colour = "red") {
       caption = paste0(
         'Source: Brasil.IO COVID-19 Dataset - Last Updated\n',
         format(Sys.time(), '%d %b %Y, %H:%M'),
-        '(Brazil Time) | Twitter: @ramongss'
+        '(UTC) | Twitter: @ramongss'
       )
     )+
     coord_cartesian(
@@ -130,7 +130,7 @@ ma_plot_conf <- function(data, colour = "blue") {
       caption = paste0(
         'Source: Brasil.IO COVID-19 Dataset - Last Updated\n',
         format(Sys.time(), '%d %b %Y, %H:%M'),
-        '(Brazil Time) | Twitter: @ramongss'
+        '(UTC) | Twitter: @ramongss'
       )
     )+
     coord_cartesian(
