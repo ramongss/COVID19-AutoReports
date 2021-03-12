@@ -17,7 +17,7 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown", "tidyverse", "zoo", "here", "extrafont"))'
       - name: Render README
-        run: Rscript -e 'rmarkdown::render("README.Rmd", output_format = "github_document")'
+        run: Rscript -e 'rmarkdown::render("README.Rmd", output_format = rmarkdown::github_document(html_preview=FALSE))'
       - name: Commit results
         run: |
           git add .
