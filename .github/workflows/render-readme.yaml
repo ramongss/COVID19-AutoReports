@@ -1,6 +1,8 @@
 on:
   push:
     branches: master
+  schedule:
+    - cron: "*/5 * * * *"
 
 name: Render README
 
@@ -13,7 +15,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install rmarkdown
-        run: Rscript -e 'install.packages("rmarkdown", "tidyverse", "zoo", "here", "extrafonts")'
+        run: Rscript -e 'install.packages(("rmarkdown", "tidyverse", "zoo", "here", "extrafonts"))'
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd", output_format = "github_document")'
       - name: Commit results
