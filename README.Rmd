@@ -12,9 +12,7 @@ source(here::here("R", "03_get-data-and-save-figures.R"))
 
 ## Dataset
 
-The dataset is provided by [Brasil.IO](https://brasil.io) which retrieves the daily information about COVID-19 cases from all 27 Brazilian State Health Offices, assembles and makes them publicly available. 
-
-The data is daily updated and reported in its [Twitter account](https://twitter.com/brasil_io).
+The dataset is provided by [Brasil.IO](https://brasil.io) which retrieves the daily information about COVID-19 cases from all 27 Brazilian State Health Offices, assembles and makes them publicly available. The data is daily updated and reported on the [Twitter account](https://twitter.com/brasil_io).
 
 Use the name of the table to the function `download_brasilio_table`, as `caso`, `caso_full`, `obito_cartorio`:
 
