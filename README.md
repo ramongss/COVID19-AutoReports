@@ -6,9 +6,7 @@ COVID-19 confirmed cases and deaths in Brazil
 The dataset is provided by [Brasil.IO](https://brasil.io) which
 retrieves the daily information about COVID-19 cases from all 27
 Brazilian State Health Offices, assembles and makes them publicly
-available.
-
-The data is daily updated and reported in its [Twitter
+available. The data is daily updated and reported on the [Twitter
 account](https://twitter.com/brasil_io).
 
 Use the name of the table to the function `download_brasilio_table`, as
@@ -50,4 +48,4 @@ bars, and the line as the moving average of the last 7 days.
 
 This page is daily updated automatically using Github Actions.
 
-*Last update: 12 Mar 2021, 16:08 BRT (UTC−03:00).*
+*Last update: 12 Mar 2021, 20:25 BRT (UTC−03:00).*
