@@ -6,8 +6,8 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-# load plot functions
-source(here::here("R", "02_create-plots.R"))
+# update figures
+source(here::here("R", "03_get-data-and-save-figures.R"))
 ```
 
 ## Dataset
@@ -18,7 +18,7 @@ The data is daily updated and reported in its [Twitter account](https://twitter.
 
 Use the name of the table to the function `download_brasilio_table`, as `caso`, `caso_full`, `obito_cartorio`:
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 download_brasilio_table <- function(dataset = "covid19", table_name){
   url <- sprintf(
     "https://data.brasil.io/dataset/%s/%s.csv.gz", dataset, table_name
@@ -35,13 +35,13 @@ download_brasilio_table <- function(dataset = "covid19", table_name){
 
 ## COVID-19 Confirmed cases
 
-Currently, Brazil has a total of `r format(sum(data_br$new_confirmed), nsmall=1, big.mark=",")` confirmed cases at `r format(Sys.Date(), "%d %b, %Y")`. Here follows the Figure showing the confirmed case incidence as the bars, and the line as the moving average of the last 7 days.
+Currently, Brazil has a total of `r format(sum(data_br$new_confirmed), nsmall=1, big.mark=",")` confirmed cases at `r format(Sys.Date(), "%d %b, %Y")`. The daily maximum incidence was `r format(max(data_br$new_confirmed), nsmall=1, big.mark=",")` confirmed cases at `r format.Date(data_br[which(data_br$new_confirmed == max(data_br$new_confirmed)), 'date'], "%d %b, %Y")`. Here follows the Figure showing the confirmed case incidence as the bars, and the line as the moving average of the last 7 days.
 
 ![COVID-19 Confirmed Cases](figures/confirmed.png)
 
 ## COVID-19 Deaths
 
-Currently, Brazil has a total of `r format(sum(data_br$new_deaths), nsmall=1, big.mark=",")` deaths at `r format(Sys.Date(), "%d %b, %Y")`. Here follows the Figure showing the deaths incidence as the bars, and the line as the moving average of the last 7 days.
+Currently, Brazil has a total of `r format(sum(data_br$new_deaths), nsmall=1, big.mark=",")` deaths at `r format(Sys.Date(), "%d %b, %Y")`. The daily maximum deaths incidence was `r format(max(data_br$new_deaths), nsmall=1, big.mark=",")` deaths at `r format.Date(data_br[which(data_br$new_deaths == max(data_br$new_deaths)), 'date'], "%d %b, %Y")`. Here follows the Figure showing the deaths incidence as the bars, and the line as the moving average of the last 7 days.
 
 ![COVID-19 Deaths](figures/deaths.png)
 
@@ -50,6 +50,6 @@ Currently, Brazil has a total of `r format(sum(data_br$new_deaths), nsmall=1, bi
 
 This page is updated automatically using Github Actions. 
 
-*Last update: `r format(Sys.time(), '%d %b %Y, %H:%M')`.*
+*Last update: `r format(Sys.time(), '%d %b %Y, %H:%M')` BRT (UTC−03:00).*
 
 
