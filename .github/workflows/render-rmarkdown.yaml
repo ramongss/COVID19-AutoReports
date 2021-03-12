@@ -1,11 +1,11 @@
 name: Render Rmarkdown files every 5 minutes
 
 on:
-  push:
-#  schedule:
-#    - cron: "*/5 * * * *"
-      paths:
-        - '**.Rmd'
+#  push:
+  schedule:
+    - cron: "*/5 * * * *"
+#      paths:
+#        - '**.Rmd'
 
 jobs:
   render:
