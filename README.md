@@ -48,4 +48,4 @@ bars, and the line as the moving average of the last 7 days.
 
 This page is daily updated automatically using Github Actions.
 
-*Last update: 23 Mar 2021, 21:17 (UTC).*
+*Last update: 23 Mar 2021, 22:10 (UTC).*
