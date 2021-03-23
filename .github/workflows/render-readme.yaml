@@ -2,7 +2,7 @@ on:
   push:
     branches: master
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "45 23 * * *"
 
 name: Render README
 
