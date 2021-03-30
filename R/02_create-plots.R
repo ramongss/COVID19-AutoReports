@@ -27,7 +27,7 @@ ma_plot_deaths <- function(data, colour = "red") {
     geom_text(
       aes(
         y = new_deaths,
-        label = ifelse(new_deaths == max(new_deaths), max(new_deaths), "")
+        label = ifelse(new_deaths == max(new_deaths), scales::number(max(new_deaths)), "")
       ), vjust = -1, family = "Times New Roman", size = 5
     ) +
     scale_x_date(
@@ -54,7 +54,11 @@ ma_plot_deaths <- function(data, colour = "red") {
       legend.justification = 'left',
       plot.caption = element_text(size = 12, color = "gray50"),
     ) +
-    scale_y_continuous(expand = c(0,0), scales::breaks_pretty(n = 5)) +
+    scale_y_continuous(
+      expand = c(0,0),
+      breaks = c(0, seq(500, roundUp(max(data$new_deaths), 500), 1000)),
+      labels = scales::number_format()
+    ) +
     annotate(geom = 'text', x = as.Date(min(data$date)),
              y = roundUp(max(data$new_deaths), 500),
              hjust = .35, vjust = -.30,
@@ -68,7 +72,7 @@ ma_plot_deaths <- function(data, colour = "red") {
       )
     )+
     coord_cartesian(
-      ylim = c(0, roundUp(max(data$new_deaths), 500)+200)
+      ylim = c(0, roundUp(max(data$new_deaths), 500)+500)
     )
 }
 
@@ -93,7 +97,7 @@ ma_plot_conf <- function(data, colour = "blue") {
     geom_text(
       aes(
         y = new_confirmed,
-        label = ifelse(new_confirmed == max(new_confirmed), max(new_confirmed), "")
+        label = ifelse(new_confirmed == max(new_confirmed), scales::number(max(new_confirmed)), "")
       ), vjust = -1, family = "Times New Roman", size = 5
     ) +
     scale_x_date(
@@ -120,9 +124,13 @@ ma_plot_conf <- function(data, colour = "blue") {
       legend.justification = 'left',
       plot.caption = element_text(size = 12, color = "gray50"),
     ) +
-    scale_y_continuous(expand = c(0,0), scales::breaks_pretty(n = 4)) +
+    scale_y_continuous(
+      expand = c(0,0),
+      breaks = seq(0, roundUp(max(data$new_confirmed), 100000), 25000),
+      labels = scales::number_format()
+    ) +
     annotate(geom = 'text', x = as.Date(min(data$date)),
-             y = roundUp(max(data_br$new_confirmed), 100000),
+             y = roundUp(max(data$new_confirmed), 100000),
              hjust = .15, vjust = -.30,
              label = 'daily confirmed cases', color = 'gray50',
              family = 'Times New Roman', size = 7) +
