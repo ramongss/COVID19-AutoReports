@@ -49,4 +49,4 @@ the last 7 days.
 
 This page is daily updated automatically using Github Actions.
 
-*Last update: 06 Apr 2021, 23:55 (UTC).*
+*Last update: 07 Apr 2021, 14:11 (UTC).*
