@@ -56,7 +56,7 @@ ma_plot_deaths <- function(data, colour = "red") {
     ) +
     scale_y_continuous(
       expand = c(0,0),
-      breaks = c(0, seq(500, roundUp(max(data$new_deaths), 500), 1000)),
+      breaks = seq(0, roundUp(max(data$new_deaths), 500), 1000),
       labels = scales::number_format()
     ) +
     annotate(geom = 'text', x = as.Date(min(data$date)),
