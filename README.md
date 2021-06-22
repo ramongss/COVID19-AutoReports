@@ -27,8 +27,8 @@ download_brasilio_table <- function(dataset = "covid19", table_name){
 
 ## COVID-19 Confirmed cases
 
-Currently, Brazil has a total of **17,976,510** confirmed cases at **21
-Jun, 2021**, with **42,756** new confirmed cases. The daily maximum
+Currently, Brazil has a total of **18,063,163** confirmed cases at **22
+Jun, 2021**, with **83,999** new confirmed cases. The daily maximum
 incidence was **98,261** confirmed cases at **25 Mar, 2021**. Here
 follows the Figure showing the confirmed case incidence as the bars, and
 the line as the moving average of the last 7 days.
@@ -37,8 +37,8 @@ the line as the moving average of the last 7 days.
 
 ## COVID-19 Deaths
 
-Currently, Brazil has a total of **503,035** deaths at **21 Jun, 2021**,
-with **896** new deaths. The daily maximum deaths incidence was
+Currently, Brazil has a total of **505,061** deaths at **22 Jun, 2021**,
+with **1,941** new deaths. The daily maximum deaths incidence was
 **4,148** deaths at **08 Apr, 2021**. Here follows the Figure showing
 the deaths incidence as the bars, and the line as the moving average of
 the last 7 days.
@@ -49,4 +49,4 @@ the last 7 days.
 
 This page is daily updated automatically using Github Actions.
 
-*Last update: 21 Jun 2021, 23:54 (UTC).*
+*Last update: 22 Jun 2021, 23:50 (UTC).*
