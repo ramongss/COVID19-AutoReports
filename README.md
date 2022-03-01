@@ -27,8 +27,8 @@ download_brasilio_table <- function(dataset = "covid19", table_name){
 
 ## COVID-19 Confirmed cases
 
-Currently, Brazil has a total of **28,796,509** confirmed cases at **28
-Feb, 2022**, with **18,359** new confirmed cases. The daily maximum
+Currently, Brazil has a total of **28,820,007** confirmed cases at **01
+Mar, 2022**, with **21,960** new confirmed cases. The daily maximum
 incidence was **285,451** confirmed cases at **03 Feb, 2022**. Here
 follows the Figure showing the confirmed case incidence as the bars, and
 the line as the moving average of the last 7 days.
@@ -37,8 +37,8 @@ the line as the moving average of the last 7 days.
 
 ## COVID-19 Deaths
 
-Currently, Brazil has a total of **649,673** deaths at **28 Feb, 2022**,
-with **223** new deaths. The daily maximum deaths incidence was
+Currently, Brazil has a total of **649,947** deaths at **01 Mar, 2022**,
+with **261** new deaths. The daily maximum deaths incidence was
 **4,148** deaths at **08 Apr, 2021**. Here follows the Figure showing
 the deaths incidence as the bars, and the line as the moving average of
 the last 7 days.
@@ -49,4 +49,4 @@ the last 7 days.
 
 This page is daily updated automatically using Github Actions.
 
-*Last update: 28 Feb 2022, 23:54 (UTC).*
+*Last update: 01 Mar 2022, 23:54 (UTC).*
